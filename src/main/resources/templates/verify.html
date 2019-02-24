@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" th:href="@{/css/album.css}" rel="stylesheet" media="screen" />
+    <link href="signin.css" th:href="@{/css/signin.css}" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+  	
+  	<form class="form-signin">
+      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" th:src="@{/img/bootstrap-solid.svg}" alt="" width="72" height="72">
+	  <h1 class="h3 mb-3 font-weight-normal">Completed</h1>
+	  <div class="alert alert-success" role="alert">
+	  <h4 class="alert-heading">Well done!</h4>
+	  <p>User registered successfully</p>
+	  <hr>
+	  <p><a href="#" th:href="@{/showMyLoginPage}">Login with new user</a></p>
+	  </div>
+	 </form>
+  </body>
+</html>
