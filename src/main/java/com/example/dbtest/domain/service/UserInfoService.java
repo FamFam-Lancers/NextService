@@ -41,11 +41,21 @@ public class UserInfoService implements UserDetailsService {
 
 		return userInfo;
 	}
+
+	public UserInfo findByTempkey(String tempkey) {
+    	return userInfoRepository.findByTempkey(tempkey);
+	}
 	
 	@Transactional
 	public void save(UserInfo userInfo) {
 		String hushPass = passwordEncoder.encode(userInfo.getPassword());
 		userInfo.setPassword(hushPass);
+		userInfoRepository.save(userInfo);
+	}
+
+	@Transactional
+	public void setEnabled(UserInfo userInfo) {
+		userInfo.setEnabled(true);
 		userInfoRepository.save(userInfo);
 	}
 
