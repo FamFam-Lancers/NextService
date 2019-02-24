@@ -34,6 +34,7 @@ dependencies {
     implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
     implementation('org.springframework.boot:spring-boot-starter-validation')
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-mail') // Add 19-02-23
     implementation('mysql:mysql-connector-java:8.0.12')
 
     // Flyway DB Migration
