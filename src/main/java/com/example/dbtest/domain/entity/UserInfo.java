@@ -61,6 +61,9 @@ public class UserInfo implements UserDetails {
 	
 	@Column(nullable = false)
 	private String authority;
+
+	@Column
+	private String tempkey;
 	
 
 	@Override
@@ -92,16 +95,16 @@ public class UserInfo implements UserDetails {
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return true;
+		return this.enabled;
 	}
 
-	public UserInfo(String username, String email, String password, Boolean enabled, String authority) {
+	public UserInfo(String username, String email, String password, Boolean enabled, String authority, String tempkey) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.enabled = enabled;
 		this.authority = authority;
+		this.tempkey = tempkey;
 	}
 
 
